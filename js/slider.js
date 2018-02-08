@@ -32,23 +32,10 @@ $(function () {
     });
     //dots
     for (let i = 0; i < tabDots.length; i++) {
-        console.log(tabDots[3]);
+        $(tabDots[i]).on("click", function () {
+            slide(slideindex = i);
+        });
     }
-    $(tabDots[0]).on("click", function () {
-        slide(slideindex = 0);
-    });
-    $(tabDots[1]).on("click", function () {
-        slide(slideindex = 1);
-    });
-    $(tabDots[2]).on("click", function () {
-        slide(slideindex = 2);
-    });
-    $(tabDots[3]).on("click", function () {
-        slide(slideindex = 3);
-    });
-    $(tabDots[4]).on("click", function () {
-        slide(slideindex = 4);
-    });
 
     function slide(newSlideIndex) {
         //        if (newSlideIndex < 0 || newSlideIndex >= slidecount) {
